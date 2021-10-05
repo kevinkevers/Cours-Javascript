@@ -58,7 +58,8 @@
 
     //IMC = masse/(taille au carré en mètre)
     const computeIMC = (weight, height) => {
-        if(!Number.isInteger(weight) || !Number.isInteger(height)){ console.error('There is a problem');
+        if(!Number.isInteger(weight) || !Number.isInteger(height)){ 
+         console.error('There is a problem');
          return null;
         }
         const heightInMeter = height / 100;
