@@ -1,0 +1,4 @@
+- Modifier le code
+- git add . // tracke l'ensemble des fichiers et dossiers
+- git commit -a -m "Mon nom de commit"
+- git push
