@@ -1,0 +1,22 @@
+## Exercice 3
+
+Jeu de cochon
+
+Le jeu de Cochon est un jeu de dés à risque très simple dans lequel deux joueurs font la course pour atteindre 100 points. À chaque tour, un joueur lance un dé à plusieurs reprises jusqu'à ce qu'un 1 soit obtenu ou que le joueur tienne et marque la somme des lancers (c'est-à-dire le total du tour).
+
+A tout moment pendant le tour d'un joueur, le joueur est confronté à deux décisions :
+roll.Si le joueur obtient un
+
+- 1 : le joueur ne marque rien et c'est au tour de l'adversaire.
+- 2 - 6 : le nombre est ajouté au total du tour du joueur et le tour du joueur continue.
+hold - Le total du tour est ajouté au score du joueur et devient le tour de l'adversaire.
+
+**Créer 3 boutons :**
+
+- Lancer la partie / redémarrer une partie
+- Passer son tour / valider son score
+- Lancer le dé
+
+Lorsque vous avez joué, c'est au tour de l'ordinateur de prendre une décision. Laissez un temp aléatoire entre 0.2s et 2s de réflexion à l'ordinateur pour chaque réponse.
+
+Une fois qu'un joueur arrive ou dépasse 50 points, la partie s'arrête et affiche le gagnant.
