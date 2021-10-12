@@ -1,0 +1,11 @@
+Créer une calculatrice
+
+Créer une fonction qui prend en paramètre 3 éléments :
+
+- Le nombre 1
+- L'opérateur : + - * /
+- Le nombre 2
+
+ et qui affiche le résultat à 2 décimales près comme ceci :
+
+Le calcul demandé est 1/3 = 0.33
