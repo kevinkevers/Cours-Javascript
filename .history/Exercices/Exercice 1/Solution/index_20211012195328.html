@@ -85,17 +85,11 @@
 
     };
 
-    people.forEach((person,index)=>{
-        const imc = computeIMC(person.weight,person.height);
+    people.forEach(({weight,height,name},index)=>{
+        const imc = computeIMC(weight,height);
         const display = displayIMC(imc)
-        console.log(`${person.name} => ${display}`)
+        console.log(`${name} => ${display}`)
     })
-
-    people.forEach(({ weight, height, name }, index) => {
-            const imc = computeIMC(weight, height);
-            const display = displayIMC(imc)
-            console.log(`${name} => ${display}`)
-        })
 
 </script>
 

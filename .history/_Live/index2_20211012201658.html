@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+ const myFunc = function(){
+     return 'hello'
+ }
+
+ const myNumber = 10
+ const myObject = {
+     myProperty: 10
+ }
+
+ const myMultipleObject = {
+     embedded:{
+         test:10
+     }
+ }
+
+ const copyMultiple = {...myMultipleObject,embedded:{...embedded}}
+
+ myMultipleObject.embedded = 20;
+
+ console.warn(myMultipleObject)
+
+ Object.freeze(myObject)
+ 
+ //myObject = 100
+
+ myObject.myProperty = 200
+
+
+ console.log(myObject)
+
+ console.log(myObject)
+
+ const myTable = ['hello']
+
+ console.log(typeof myTable)
+ console.log(Array.isArray(myTable))
+
+ const myNewTable = [...myTable]
+
+ let myNewNumber = myNumber;
+ let myNewObject = {...myObject};
+
+ myNewNumber = 100;
+ myNewObject.myProperty = 100;
+
+ console.log(myNumber,myObject.myProperty)
+
+
+ myFunc.maPropriete = "Coucou"
+ console.log(myFunc.maPropriete)
+</script>
+</html>

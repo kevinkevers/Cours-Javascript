@@ -69,33 +69,7 @@
         return weight / (heightInMeter * heightInMeter);
     };
 
-    const displayIMC = (imc)=>{
-        if(Number.isNaN(imc)) return null;
-        let corpulence = null;
-        
-        if(imc <= 18.4) corpulence = 'maigre'
-        else if(imc <= 24.9) corpulence = 'normale'
-        else if(imc <= 29.9) corpulence = 'surpoids'
-        else if(imc <= 34.9) corpulence = 'obésité modérée'
-        else if (imc <= 39.9) corpulence = 'obésité'
-        else corpulence = 'obésité morbide'
-        
-        const response = `La personne a une corpulence  ${corpulence}`
-        return response;
-
-    };
-
-    people.forEach((person,index)=>{
-        const imc = computeIMC(person.weight,person.height);
-        const display = displayIMC(imc)
-        console.log(`${person.name} => ${display}`)
-    })
-
-    people.forEach(({ weight, height, name }, index) => {
-            const imc = computeIMC(weight, height);
-            const display = displayIMC(imc)
-            console.log(`${name} => ${display}`)
-        })
+    console.log(computeIMC(50,0));
 
 </script>
 

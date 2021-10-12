@@ -80,22 +80,14 @@
         else if (imc <= 39.9) corpulence = 'obésité'
         else corpulence = 'obésité morbide'
         
-        const response = `La personne a une corpulence  ${corpulence}`
+        const response = `La personne a une  ${corpulence}`
         return response;
 
     };
 
     people.forEach((person,index)=>{
-        const imc = computeIMC(person.weight,person.height);
-        const display = displayIMC(imc)
-        console.log(`${person.name} => ${display}`)
+        computeIMC(person.weight,person.height)
     })
-
-    people.forEach(({ weight, height, name }, index) => {
-            const imc = computeIMC(weight, height);
-            const display = displayIMC(imc)
-            console.log(`${name} => ${display}`)
-        })
 
 </script>
 
