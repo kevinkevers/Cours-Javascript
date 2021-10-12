@@ -1,0 +1,18 @@
+Pendu
+
+Réaliser un pendu selon les régles suivantes :
+
+- La partie commence lorsque l'on appuie sur 'nouvelle partie'
+- Un chrono est lancé (à afficher en cas de victoire)
+- Un mot est trouvé aléatoirement parmi ces mots ⇒ chemise, as, patron,calme,printemps,angoisse, habitant,métier,note,fusil,agent,roman,plante,accent,repas,étendue,corde,saison
+
+- L'utilisateur entre des lettres dans l'input
+    - Si la lettre n'a pas encore été entrée
+        - Vérifié qu'il s'agisse bien d'une lettre et pas d'un chiffre
+        - Vérifier si la lettre est dans le mot
+            - Si oui ⇒ Compléter les _ aux bons endroits
+            - Si non ⇒ Ajouter une étape au pendu
+        - Ajouter la lettre à la liste des lettres déjà tapées
+    - Si la lettre a déjà été tapée ⇒ Annuler la frappe (supprimer ce qui a été tappé)
+- Si le pendu est complet ⇒ partie perdue avec l'affichage de : "Partie perdue, le mot était ......."
+- Si le mot et trouvé ⇒ Partie gagnée en X secondes

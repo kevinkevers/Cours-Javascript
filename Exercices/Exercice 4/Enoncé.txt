@@ -1,0 +1,17 @@
+Créer une fonction qui calcule l'épaisseur d'une feuille de papier en fonction du nombre de plis donné. 
+
+L'épaisseur de la feuille est de 5mm. La valeur affichée doit être en mètre
+
+Exemple : 
+
+0 pli ⇒ 0.005m
+
+1 pli ⇒ 0.01m
+
+2 plis ⇒ 0.020m
+
+3 plis ⇒ 0.4m
+
+...
+
+14 plis ⇒ 8.192mm
