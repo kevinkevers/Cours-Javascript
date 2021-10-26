@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+const minSalary = 2000;
+const maxSalary = 3000;
+const insurance = 0.07;
+const taxes = 0.4;
+const minSalaryPrime = 2500;
+const prime = 100;
+
+const generateGrossWage = (min,max) => {
+    if(min && max && Number.isNaN(min) || Number.isNaN(max) || min > max) return -1
+    return (Math.random() * (max - min) + min).toFixed(2)
+}
+
+const computeNetSalary = (grossSalary, options) => {
+    if(!options?.taxes) return;
+    let net = Number(grossSalary);
+    if(options?.insurance) net = net * (1 - options.insurance)
+    
+    net = net * (1 - options?.taxes)
+    // const insurance = net * options.insurance
+    // net = net - insurance;
+    if (options?.prime && options?.minSalaryPrime) {
+        if (Number(grossSalary) <= options?.minSalaryPrime) net += options.prime
+    }
+    return net;
+}
+
+const display = (gross,net,hasPrime)=>{
+  console.log(`Le salaire brut est de ${gross} et le salaire net est de ${net}`)
+  console.log(`La personne a bénéficié d'allocation : ${hasPrime ? 'oui' : 'non'}`)
+}
+
+const grossSalary = generateGrossWage(minSalary, maxSalary)
+const netSalary = computeNetSalary(grossSalary, {
+        minSalary,
+        prime,
+        taxes,
+        insurance,
+        minSalaryPrime
+    })
+const hasPrime = grossSalary < minSalaryPrime
+display(grossSalary,netSalary,hasPrime)
+</script>
+</html>
