@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+const array1 = ['jean','alain','sandra','jade'];
+const array2 = [...array1];
+array1.push('bon')
+const array3 = array1.filter((element)=>{
+    return element.charAt(0) === 'j'
+});
+// fonction externalisée
+const filterByJ = (element) => {
+    return element.toLowerCase().charAt(0) === 'j'
+}
+const array4 = array1.filter(element => filterByJ(element));
+
+console.log('Array 1',array1)
+console.log('Array 2',array2)
+console.log('Array 3',array3)
+
+const users = [
+    {
+        name:'Henri botte',
+        age:15
+    },
+    {
+        name: 'Petit gregory',
+        age: 40
+    },
+    {
+        name: 'Julien Lepers',
+        age: 67
+    }
+]
+// retourner un nouveau tableau mappé
+// tableau avec la liste des noms des users
+const usersNames = users.map(user => user.name)
+const usersNamesFilteredByJ = users.filter(element => filterByJ(element.name)).map(user => {
+    return {
+        hasJ: filterByJ(user.name),
+        name:'Replace the name',
+        // replace the data
+                ...user
+    }
+})
+console.log('users names', usersNamesFilteredByJ)
+</script>
+</body>
+</html>
