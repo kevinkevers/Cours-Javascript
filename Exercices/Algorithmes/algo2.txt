@@ -1,0 +1,7 @@
+Un groupe d'amis partent en vacances ensemble. Ils ont un point de rendez-vous en utilisant N voitures. Il y a P[K] personnes et S[K] sièges. Dans un but écologique, ils aimeraient utiliser le moins de voitures possible.
+
+Si P=[1,4,1] et S[1,5,1] la fonction doit retourner 2 car la personne de la voiture 1 va dans la voiture 2
+
+Si P=[4,4,2,4] et S[5,5,2,5] la fonction doit retourner 3 car les personnes de la voiture 3 vont dans les voitures 1 et 2
+
+Si P=[2,3,4,2] et S[2,5,7,2] la fonction doit retourner 2
