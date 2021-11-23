@@ -1,0 +1,7 @@
+Comprendre la logique et créer une fonction qui permet de retourner les éléments suivants
+mysteryFunc(152) ➞ 10
+mysteryFunc(832) ➞ 48
+mysteryFunc(19) ➞ 9
+mysteryFunc(133) ➞ 9
+mysteryFunc(0) ➞ 0
+mysteryFunc(1423) ➞ 24
