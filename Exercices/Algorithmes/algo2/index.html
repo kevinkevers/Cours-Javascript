@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    /*
+    Un groupe d'amis partent en vacances ensemble. Ils ont un point de rendez-vous en utilisant N voitures. Il y a P[K] personnes et S[K] sièges. Dans un but écologique, ils aimeraient utiliser le moins de voitures possible.
+
+Si P=[1,4,1] et S[1,5,1] la fonction doit retourner 2 car la personne de la voiture 1 va dans la voiture 2
+
+Si P=[4,4,2,4] et S[5,5,2,5] la fonction doit retourner 3 car les personnes de la voiture 3 vont dans les voitures 1 et 2
+
+Si P=[2,3,4,2] et S[2,5,7,2] la fonction doit retourner 2
+    */
+    const P1 = [1, 4, 1]
+    const S1 = [1, 5, 1]
+    const P2 = [4, 4, 2, 4]
+    const S2 = [5, 5, 2, 5]
+    const P3 = [2, 3, 4, 2]
+    const S3 = [2, 5, 7, 2]
+
+    const algo = (P,S) => {
+        if(!Array.isArray(P) || !Array.isArray(S)) throw("People and Seats must be arrays")
+       const people = P.reduce((currentValue,previousValue) => currentValue+previousValue)
+       const carsSortedBySeats = S.sort((a,b)=>b-a)
+       let peopleToSit = people;
+
+       for(let i =0; i < carsSortedBySeats.length; i++){
+           peopleToSit -= carsSortedBySeats[i]
+           if(peopleToSit <= 0) return i+1;
+       }
+       return -1;
+    }
+
+    console.log(algo(P1,S1))
+    console.log(algo(P2,S2))
+    console.log(algo(P3,S3))
+</script>
+
+</html>
