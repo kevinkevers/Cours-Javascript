@@ -1,0 +1,9 @@
+Selon un tableau A de N entiers, retourner le plus petit entier positif (strictement plus grand que 0) qui n'est pas dans le tableau.
+
+Par exemple : 
+
+Si A = [1, 3, 6, 4, 1, 2], la fonction doit retourner 5.
+
+Si A = [1, 2, 3], la fonction doit retourner 4.
+ 
+Si A = [−1, −3], la fonction doit retourner 1.
