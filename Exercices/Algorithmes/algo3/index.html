@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    /*
+    Comprendre la logique et créer une fonction qui permet de retourner les éléments suivants
+        mysteryFunc(152) ➞ 10
+        mysteryFunc(832) ➞ 48
+        mysteryFunc(19) ➞ 9
+        mysteryFunc(133) ➞ 9
+        mysteryFunc(0) ➞ 0
+        mysteryFunc(1423) ➞ 24
+    */
+
+
+    const mysteryFunc = (nbr) => {
+        if(!Number.isInteger(nbr)) throw('Not an integer')
+        const nbrInString = nbr.toString()
+        const numbers = nbrInString.split('')
+        let isPositive = true;
+        if(numbers[0] === '-') {
+            isPositive = false
+            numbers.shift()
+        }
+
+        let total = numbers.reduce((previous, next)=> previous*next)
+        if(!isPositive) total *= -1
+
+        console.log(total);
+        return total;
+    }
+
+    mysteryFunc(-152)
+    mysteryFunc(832)
+    mysteryFunc(19)
+    mysteryFunc(133)
+    mysteryFunc(0)
+    mysteryFunc(1423)
+    //mysteryFunc('(1423)')
+    mysteryFunc()
+</script>
+
+</html>

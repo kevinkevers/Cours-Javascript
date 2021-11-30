@@ -1,4 +1,4 @@
-Créer une fonction récursive qui retourne le nombre passer en paramètre, multiplié par  chaque nombre de 1 à 10
+Créer une fonction récursive qui retourne le nombre passer en paramètre, multiplié par chaque nombre de 1 à 10
 
 ```
 multiSum(1) ➞ 55

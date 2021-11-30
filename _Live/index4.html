@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    const loopFor = () =>{
+        for(let i = 0; i < 10;i++){
+            console.log(i)
+        }
+    }
+
+    const loopRecursive = (index) =>{
+        console.log('loop',index)
+        if(index >= 10) return index
+        return loopRecursive(index+1)
+    }
+
+    const factorielle = (index,number = 1) =>{
+        if(index <= 0) return number
+        return factorielle(index-1,number*index)
+    }
+
+    const factorielle2 = (number) =>{
+        if(number <= 0) return number
+        return number * factorielle2(number-1)
+    }
+
+    
+
+    
+
+    loopFor();
+    console.log(loopRecursive(0));
+    console.log('factorielle',factorielle(5));
+    console.log('factorielle',factorielle2(5));
+    console.log('factorielle',factorielle(3));
+</script>
+</html>

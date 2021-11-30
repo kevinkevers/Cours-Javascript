@@ -1,13 +1,4 @@
 Créer une fonction récursive qui retourne le nombre passer en paramètre, multiplié par  chaque nombre de 1 à 10
-
-```
-multiSum(1) ➞ 55
-// 1 x 1 + 1 x 2 + 1 x 3 ...... 1 x 9 + 1 x 10 = 55
-multiSum(6) ➞ 330
-// 6 x 1 + 6 x 2 + 6 x 3 ...... 6 x 9 + 6 x 10 = 330
-multiSum(10) ➞ 550
-multiSum(8) ➞ 440
-multiSum(2) ➞ 110
 ```
 
 Créer une fonction qui calcule le dénominateur commun de deux nombres passés en paramètre
