@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Exercise 4</title>
+    <meta charset="UTF-8" />
+    <style>
+        section {
+            margin-bottom: 50px;
+        }
+
+        .colored-div {
+            width: 100px;
+            height: 100px;
+            background: black;
+        }
+
+        .date {
+            font-size: 12px;
+        }
+
+        .progress-bar {
+            background: grey;
+            width: 200px;
+            height: 20px;
+            position: relative;
+        }
+
+        .progress {
+            width: 1%;
+            height: 20px;
+            background: blue;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 9;
+        }
+
+        .disabled {
+            pointer-events: none;
+            opacity: .5;
+        }
+
+        .percentage {
+            position: relative;
+            z-index: 99;
+            display: block;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+
+
+    <section id="ex-2">
+        <h2>Barre de progression</h2>
+        <!-- 2) Créer une barre de progression (les styles sont déjà définis dans la class .progress)
+                - Permettre de mettre en pause la barre et changer le texte (Démarrer - Stop)
+                - Bonus : Permettre de redémarrer la barre de progression une fois arrivé à 100%
+            -->
+        <div>
+            <div class="progress-bar">
+                <div class="percentage"><strong>10</strong>%</div>
+                <div :style="progressBarWidth" class="progress"></div>
+            </div>
+            <button>Start / Stop</button>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
