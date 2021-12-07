@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+   const myPromise = new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            //throw ('Mon erreur')
+            //resolve('Hello')
+            reject('There is an error')
+        },2000)
+   })
+
+   const myFunction = async (parameter) => {
+        const localPromise = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                if(parameter === 10)resolve('Yes')
+                else reject('No')
+            },2000)
+        })
+
+        localPromise.then((res)=>{
+            console.log('It works ! ',res)
+        }).catch((res)=>{
+            console.warn('There is an error',res)
+        })
+    try{
+        const awaitme = await localPromise
+
+        console.log('awaitme',awaitme);
+    }catch(e){
+        console.warn('Caught error in await',e)
+    }
+
+    }
+
+    myFunction(10) 
+    myFunction(11)
+   
+   let storeMyData = "not set";
+
+   myPromise.then((data)=>{
+       console.log('Then');
+       storeMyData = data
+   }).catch((data)=>{
+       console.log('catch me',data)
+        setTimeout(()=>{
+            //mon call
+        },30000)
+   }).finally((data)=>{
+       console.log('Anyway')
+   })
+   
+   console.log('Après mon then',storeMyData)
+</script>
+</html>
