@@ -1,0 +1,1 @@
+Créer une fonction qui prend un paramètre quelconque et qui retourne une promesse. En utilisant un setTimeout de 2 secondes (pour simuler l'asynchrone), resolve ou reject le résultat. Si le paramètre est un string, renvoyer cette même chaine de caractères en majuscule. Sinon, rejeter en renvoyer la chaîne de caractères.

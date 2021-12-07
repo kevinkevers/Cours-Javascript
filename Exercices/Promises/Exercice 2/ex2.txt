@@ -1,0 +1,8 @@
+Créer une interface qui affiche les utilisateurs d'une plateforme avec une pagination. Les spécifications sont les suivantes :
+
+- Le endpoint est : [https://reqres.in/api/users?page=](https://reqres.in/api/users?page=2&per_page=2)1
+- Au chargement de la page, afficher un Loader en attendant d'avoir les données de la page 1
+- Lorsque l'on clique sur un nombre, un appel est fait à l'API et met à jour les données
+- Lorsqu'on clique sur next et previous, on eee
+- Afficher les pages de manières dynamiques (en fonction du nombre de résultats)
+- Pour aller plus loin : Permettre à l'utilisateur de choisir le nombre d'éléments à afficher par page via l'attribut [per_page=2](https://reqres.in/api/users?page=2&per_page=2)
