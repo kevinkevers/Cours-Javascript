@@ -1,8 +1,12 @@
 Créer une interface qui affiche les utilisateurs d'une plateforme avec une pagination. Les spécifications sont les suivantes :
 
-- Le endpoint est : [https://reqres.in/api/users?page=](https://reqres.in/api/users?page=2&per_page=2)1
+- Le endpoint est : https://reqres.in/api/users?page=2&per_page=2
 - Au chargement de la page, afficher un Loader en attendant d'avoir les données de la page 1
 - Lorsque l'on clique sur un nombre, un appel est fait à l'API et met à jour les données
-- Lorsqu'on clique sur next et previous, on eee
+- Lorsqu'on clique sur next et previous, on charge la page correspondante.
 - Afficher les pages de manières dynamiques (en fonction du nombre de résultats)
-- Pour aller plus loin : Permettre à l'utilisateur de choisir le nombre d'éléments à afficher par page via l'attribut [per_page=2](https://reqres.in/api/users?page=2&per_page=2)
+- Pour aller plus loin : 
+    - Permettre à l'utilisateur de choisir le nombre d'éléments à afficher par page via l'attribut [per_page=2](https://reqres.in/api/users?page=2&per_page=2)
+    - Permettre à l'utilisateur d'éditer le nom d'un utilisateur en double cliquant sur le nom de l'utilisateur. L'édition se fait à chaque levée de touche. Prévoir un debounce de 300ms afin de ne pas envoyer trop de requêtes.
+    - Créer un fake user qui renvoit vers https://reqres.in/api/users/23 et gérer le cas en affichant une erreur à l'utilisateur.
+
